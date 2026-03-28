@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Configure AWS credentials
@@ -20,19 +20,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
-      - name: Debug + Deploy
+      - name: Show files (debug)
         run: |
-          echo "📂 Current directory:"
-          pwd
+          echo "FILES:"
+          ls -R
 
-          echo "📁 Files in repo:"
-          ls -la
-
-          echo "🚀 Uploading to S3..."
+      - name: Force upload to S3
+        run: |
           aws s3 rm s3://srushti-todo-app-1774624645 --recursive
-
-          aws s3 sync . s3://srushti-todo-app-1774624645 \
+          aws s3 cp . s3://srushti-todo-app-1774624645 --recursive \
           --exclude ".git/*" \
           --exclude ".github/*"
-
-          echo "✅ Deployment finished"
