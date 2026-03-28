@@ -1,29 +1,44 @@
+# 🚀 To-Do App Deployment on AWS S3
 
-# To-Do-List
+## 📌 Project Overview
+This project demonstrates deployment of a static To-Do web application using AWS S3 with automated CLI-based workflow.
 
-## A Simple To - Do Website!
+## 🌐 Live Demo
+👉 http://srushti-todo-app-1774624645.s3-website-ap-south-1.amazonaws.com
 
-# To Do List
+## 🛠️ Tech Stack
+* HTML, CSS, JavaScript
+* AWS S3 (Static Website Hosting)
+* AWS CLI
+* Git & GitHub
 
+## ⚙️ Features
+* Add & delete tasks
+* Responsive UI
+* Serverless deployment
+* Fast and scalable hosting
 
-### *Features*:
+## 🚀 Deployment Steps
 
-* User-friendly
-* Local Storage Supported
-* Displays current Date and Time
-* Responsive, on all devices
-* Themes: Users can choose among different themes.
+```bash
+# Configure AWS
+aws configure
 
+# Create bucket
+aws s3 mb s3://your-bucket-name
 
-# *References*
+# Upload files
+aws s3 sync . s3://your-bucket-name
 
-* For Fonts: [Google Fonts](https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap)
-* For Basic Icons (like Trash and Check buttons): [font-awesome](https://fontawesome.com)
-* For Favicon: [icons8](https://icons8.com/icons/)
-* For Color Coordination: [w3schools](https://www.w3schools.com/colors/colors_mixer.asp?colorbottom=000000&colortop=FFFFFF)
-* For JavaScript (Tutorial): [The Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9i9Ae2D9Ee1RvylH38dKuET)
-* For help with CSS: [CSS Tricks](https://css-tricks.com/)
-* For more CSS effects: [text-effects](https://speckyboy.com/underline-text-effects-css/)
-* For Type Writing effects: [Type-effects](https://usefulangle.com/post/85/css-typewriter-animation)
-* For Local Storage: [Web Dev Simplified Blog](https://blog.webdevsimplified.com/2020-08/cookies-localStorage-sessionStorage/)
+# Enable static hosting 
+```
 
+## 🔐 Key Learnings
+* S3 static hosting
+* Bucket policies & permissions
+* CLI-based automation
+
+## 💡 Future Improvements
+* Add CloudFront (CDN + HTTPS)
+* CI/CD using GitHub Actions
+* Custom domain integration
