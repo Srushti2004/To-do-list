@@ -4,7 +4,7 @@
 This project demonstrates deployment of a static To-Do web application using AWS S3 with automated CLI-based workflow.
 
 ## 🌐 Live Demo
-👉 http://srushti-todo-app-1774624645.s3-website-ap-south-1.amazonaws.com
+👉 http://srushti-todo-app-1774624645.s3-website.ap-south-1.amazonaws.com
 
 ## 🛠️ Tech Stack
 * HTML, CSS, JavaScript
